@@ -3,7 +3,7 @@
 
 import express from 'express';
 import { PORT }  from '#app/utils/constants.js';
-//import { createPath } from '#app/utils/patch.js';
+import '#app/global/sequelize.js';
 
 import registerRoutes from '#app/router.js';
 
