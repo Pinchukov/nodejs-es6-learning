@@ -1,6 +1,3 @@
-//import express from 'express';
-//const router = express.Router();
-
 import getContacts from '#app/controllers/contacts.js';
 
 export default function registerRoutes(app) {
@@ -12,4 +9,3 @@ export default function registerRoutes(app) {
         getContacts();
     });
 };
-
