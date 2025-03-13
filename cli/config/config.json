@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "nodejs-1-name",
+    "password": "nodejs-1-name",
+    "database": "nodejs-1-BD-name",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "nodejs-1-name",
+    "password": "nodejs-1-name",
+    "database": "nodejs-CRM-dev_1",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "nodejs-1-name",
+    "password": "nodejs-1-name",
+    "database": "nodejs-CRM-dev_1",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
