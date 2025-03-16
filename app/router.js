@@ -4,8 +4,7 @@ export default function registerRoutes(app) {
     app.get('/', (_, res) => {
         res.send('Hello Index Page');
     });
-    app.get('/contacts', (_, res) => {
-        res.send('Hello Contacts Page');
-        getContacts();
-    });
+
+    app.get('/contacts', getContacts);
+    
 };

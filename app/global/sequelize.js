@@ -1,6 +1,7 @@
 import { Sequelize } from "sequelize";
 
 const sequelize = new Sequelize('node-crm-dev', 'node-user-crm', 'hF8yM0gL6u', {
+	//port: "???",
 	host: "89.108.65.79",
 	dialect: 'mysql',
 	//logging: false,

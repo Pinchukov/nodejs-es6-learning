@@ -1,6 +1,3 @@
-// 01.38 time, video 3 - Подключение хранилища
-// В php курсе есть урок по запросам mysql, найти глянуть.
-
 import express from 'express';
 import { PORT }  from '#app/utils/constants.js';
 import '#app/global/sequelize.js';
