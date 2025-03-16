@@ -1,16 +1,18 @@
 import { Sequelize } from "sequelize";
+import dbConnect from "../../_private-config.js";
 
-const sequelize = new Sequelize('node-crm-dev', 'node-user-crm', 'hF8yM0gL6u', {
-	//port: "???",
-	host: "89.108.65.79",
-	dialect: 'mysql',
+const {user, bd, password, ip, dialect, port} = dbConnect;
+
+const sequelize = new Sequelize(bd, user, password, {
+	port: port,
+	host: ip,
+	dialect: dialect,
 	//logging: false,
 	dialectOptions: {},
 	logging: (msg) => {
 		console.log('my', msg)
 	}
 });
-
 
 try {
 	await sequelize.authenticate();
