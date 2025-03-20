@@ -2,11 +2,11 @@ import User from "#app/models/users.js";
 
 try{
 	const user = await User.create({
-		login: "user5",
+		login: "admin",
 		password: "111",
-		fullName: "user5 user5 user5",
+		fullName: "admin admin admin",
 		avatar: "#",
-		roleId: "4",
+		roleId: "2",
 	});
 	console.log(user);
 }

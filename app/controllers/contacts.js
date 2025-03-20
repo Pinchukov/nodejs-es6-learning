@@ -5,7 +5,8 @@ export default async function contacts(_req, resp){
 	const posts = await Post.findAll({
 		limit: 2,
 		order: [[ 'createdAt',  'DESC', ]],
-		include: [ Roles, ] // Присовокупили таблицу Roles
+		include: [ Roles, ], // Присовокупили таблицу Roles
+		//exclude: [], // ??
 	});
 
     //console.log(JSON.stringify(posts))

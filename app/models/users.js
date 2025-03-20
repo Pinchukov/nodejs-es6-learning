@@ -4,8 +4,6 @@ import sequelize from '#app/global/sequelize.js';
 //import Roles from '#app/models/roles.js';
 import Roles from './roles.js';
 
-// 5 video, time: 01.50
-
 const Users = sequelize.define(
 	'Users',
 	{
@@ -51,15 +49,19 @@ const Users = sequelize.define(
 	{
 		sequelize,
 		defaultScope: {
-			attributes: { exclude: ['password'] }
+			attributes: { exclude: [ 'password' ] }
 		},
-		// scopes: {
-		// 	auth: {
-		// 		attributes: {}
-		// 	}
-		// }
+		scopes: {
+			auth: {
+				attributes: {}
+			}
+		}
 	}
 );
+
+
+
+
 
 Users.belongsTo(Roles, {
 	foreignKey: {
