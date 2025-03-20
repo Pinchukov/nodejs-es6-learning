@@ -1,10 +1,8 @@
-import getContacts from '#app/controllers/contacts.js';
+import contacts from '#app/controllers/contacts.js';
+import home from '#app/controllers/home.js';
 
 export default function registerRoutes(app) {
-    app.get('/', (_, res) => {
-        res.send('Hello Index Page');
-    });
-
-    app.get('/contacts', getContacts);
+    app.get('/', home);
+    app.get('/contacts', contacts);
     
 };

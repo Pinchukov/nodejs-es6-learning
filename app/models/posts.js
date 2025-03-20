@@ -3,6 +3,7 @@ import sequelize from '#app/global/sequelize.js';
 
 //import Roles from '#app/models/roles.js';
 import Roles from './roles.js';
+import Users from './users.js';
 
 const Posts = sequelize.define('Posts', {
 	id: {
@@ -49,6 +50,17 @@ Posts.belongsTo(Roles, {
 
 Roles.hasMany(Posts, {
 	foreignKey: 'roleId'
+});
+
+Posts.belongsTo(Users, {
+	foreignKey: {
+		name:'userId',
+		allowNull: false,
+	}
+});
+
+Users.hasMany(Posts, {
+	foreignKey: 'userId'
 });
 
 export default Posts;

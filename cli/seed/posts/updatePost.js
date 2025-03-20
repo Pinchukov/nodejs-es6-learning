@@ -1,10 +1,10 @@
 import Post from "#app/models/posts.js";
 
 try{
-	const post = await Post.findByPk(2); // ID
+	const post = await Post.findByPk(5); // ID
 	console.log(post);
 
-	const res = await post.update({ roleId: '4' });
+	const res = await post.update({ userId: '2' });
 	console.log(res);
 }
 catch(e){

@@ -1,11 +1,12 @@
 import Post from "#app/models/posts.js";
 import Roles from "#app/models/roles.js";
+import Users from "#app/models/users.js";
 
-export default async function contacts(_req, resp){
+export default async function home(_req, resp){
 	const posts = await Post.findAll({
-		limit: 2,
+		limit: 5,
 		order: [[ 'createdAt',  'DESC', ]],
-		include: [ Roles, ] // Присовокупили таблицу Roles
+		include: [ Roles, Users ] // Присовокупили таблицу Roles
 	});
 
     //console.log(JSON.stringify(posts))
